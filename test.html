@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Banner Example</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+    }
+    
+    #banner {
+        background-color: blue;
+        padding-top: 5%;
+        padding-left: 10%;
+        height: 30%;
+    }
+    
+    #buttons {
+        margin-top: 1em;
+        padding-left: 1em;
+    }
+</style>
+
+<body>
+    <div id="banner">
+        <h1> This is only the beginning</h1>
+    </div>
+    <div id="buttons">
+        <input type="button" value="previous" />
+        <input type="button" value="next" />
+    </div>
+    <script type="text/javascript">
+        var bg_colors = ['red', 'blue', 'green']
+
+        function change_bg_color() {
+            bg_color = bg_colors.shift();
+            bg_colors.push(bg_color);
+            document.getElementById("buttons").style.backgroundColor = bg_color;
+        }
+    </script>
+</body>
+
+</html>
